@@ -1,7 +1,7 @@
 # My-Calc
 This project is part a second program create a calculator
 
-## expersion evaluator class
+## ExperssionEvaluator.kt
 
 class ExperssionEvaluator(private val exp: String, private val context: Context) {
 
@@ -85,7 +85,7 @@ class ExperssionEvaluator(private val exp: String, private val context: Context)
 }
 
 
-## Mainactivity
+## MainActivity.kt
 
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
