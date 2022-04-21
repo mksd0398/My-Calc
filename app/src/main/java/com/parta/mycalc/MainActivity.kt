@@ -135,7 +135,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 if (lastNumeric && !stateError) {
                     // Create an Expression (A class from exp4j library)
                     Log.i("MainActivity",input.text.toString())
-                    val expBuilder = ExperssionEvaluator(input.text.toString(), applicationContext)
+                    val expBuilder = ExpressionEvaluator(input.text.toString(), applicationContext)
                     try {
                         input.setText(expBuilder.evaluate().toString())
                         lastDot = true // Result contains a dot

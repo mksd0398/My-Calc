@@ -4,7 +4,7 @@ import android.content.Context
 import android.widget.Toast
 import java.util.*
 
-class ExperssionEvaluator(private val exp: String, private val context: Context) {
+class ExpressionEvaluator(private val exp: String, private val context: Context) {
 
     fun evaluate(): Int {
         val operands: Stack<Int> = Stack() //Operand stack
