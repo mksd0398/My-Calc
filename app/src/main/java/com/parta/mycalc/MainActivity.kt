@@ -55,35 +55,19 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 input.append(")")
             }
             btnSub -> {
-                if (lastNumeric && !stateError) {
-                    input.append("-") // accessing input without object
-                    lastNumeric = false
-                    lastDot = false
-                }
+                onOperator("-")
             }
 
             btnAdd -> {
-                if (lastNumeric && !stateError) {
-                    input.append("+")
-                    lastNumeric = false
-                    lastDot = false    // Reset the DOT flag
-                }
+                onOperator("+")
             }
 
             btnDiv -> {
-                if (lastNumeric && !stateError) {
-                    input.append("/")
-                    lastNumeric = false
-                    lastDot = false    // Reset the DOT flag
-                }
+                onOperator("/")
             }
 
             btnTimes -> {
-                if (lastNumeric && !stateError) {
-                    input.append("x")
-                    lastNumeric = false
-                    lastDot = false    // Reset the DOT flag
-                }
+                onOperator("*")
             }
 
             btnClear -> {
@@ -148,6 +132,15 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 }
             }
         }
+    }
+
+    private fun onOperator(op: String) {
+        if (lastNumeric && !stateError) {
+            input.append(op)
+            lastNumeric = false
+            lastDot = false
+        }
+
     }
 
     private fun onDigit(str: String){
